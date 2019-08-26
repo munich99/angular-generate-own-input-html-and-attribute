@@ -1,0 +1,25 @@
+<hello name="{{ nametitle }}"></hello>
+<p>
+ Generate your own input HTML code and attribute
+</p>
+
+<p>
+ Please select a function of input
+</p>
+
+<select name="cars">
+  <option *ngFor="let inputNamexx of inputName"
+   [value]="inputNamexx">{{inputNamexx}}</option>
+
+</select>
+
+<div *ngIf="inputName[0]" >
+<p>
+ Please give a name for the button
+</p>
+<input [value]="nametitleinput" 
+        (keyup)="onKeyup(titleInput.value)"
+        (focus)="onFocus()"
+        #titleInput
+>
+</div>
